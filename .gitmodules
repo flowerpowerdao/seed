@@ -1,0 +1,3 @@
+[submodule "icrc1"]
+	path = icrc1
+	url = https://github.com/NatLabs/icrc1.git

@@ -1,7 +1,7 @@
 import Option "mo:base/Option";
 import ExperimentalCycles "mo:base/ExperimentalCycles";
 
-import ICRC1 "mo:icrc1/ICRC1";
+import ICRC1 "../icrc1/src/ICRC1";
 
 shared ({ caller = _owner }) actor class Token(token_args : ICRC1.TokenInitArgs) : async ICRC1.FullInterface {
   stable let token = ICRC1.init({
@@ -53,15 +53,15 @@ shared ({ caller = _owner }) actor class Token(token_args : ICRC1.TokenInitArgs)
   };
 
   public shared ({ caller }) func icrc1_transfer(args : ICRC1.TransferArgs) : async ICRC1.TransferResult {
-    await ICRC1.transfer(token, args, caller);
+    await* ICRC1.transfer(token, args, caller);
   };
 
   public shared ({ caller }) func mint(args : ICRC1.Mint) : async ICRC1.TransferResult {
-    await ICRC1.mint(token, args, caller);
+    await* ICRC1.mint(token, args, caller);
   };
 
   public shared ({ caller }) func burn(args : ICRC1.BurnArgs) : async ICRC1.TransferResult {
-    await ICRC1.burn(token, args, caller);
+    await* ICRC1.burn(token, args, caller);
   };
 
   // Functions from the rosetta icrc1 ledger
@@ -71,7 +71,7 @@ shared ({ caller = _owner }) actor class Token(token_args : ICRC1.TokenInitArgs)
 
   // Additional functions not included in the ICRC1 standard
   public shared func get_transaction(i : ICRC1.TxIndex) : async ?ICRC1.Transaction {
-    await ICRC1.get_transaction(token, i);
+    await* ICRC1.get_transaction(token, i);
   };
 
   // Deposit cycles into this archive canister.

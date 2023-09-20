@@ -5,7 +5,6 @@
     "create-canisters": "npm run create:main",
     "create:main": "dfx canister create main --specified-id fua74-fyaaa-aaaan-qecrq-cai",
     "deploy": "dfx deploy main --argument \"$(cat initArgs.did)\"",
-    "deploy-ic": "dfx deploy main --argument \"$(cat initArgs.did)\" --network ic",
-    "postinstall": "mops install"
+    "deploy-ic": "dfx deploy main --argument \"$(cat initArgs.did)\" --network ic"
   }
 }

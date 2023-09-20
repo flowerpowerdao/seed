@@ -10,6 +10,9 @@ Fee `0.01`
 
 
 ### Local development
+1. Clone repository
+2. Run `run git submodule init` and `git submodule update`
+3. Start local replica and deploy:
 ```
 npm start
 ```
