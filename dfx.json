@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "canisters": {
+    "main": {
+      "type": "motoko",
+      "main": "src/main.mo",
+      "declarations": {
+        "node_compatibility": true,
+        "output": "declarations/main"
+      }
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "mops sources",
+      "args": ""
+    }
+  },
+  "dfx": "0.15.0",
+  "output_env_file": ".env"
+}
