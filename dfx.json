@@ -2,18 +2,13 @@
   "version": 1,
   "canisters": {
     "main": {
-      "type": "motoko",
-      "main": "src/main.mo",
+      "type": "custom",
+      "wasm": "icrc1/ic-icrc1-ledger.wasm.gz",
+      "candid": "icrc1/ledger.did",
       "declarations": {
         "node_compatibility": true,
         "output": "declarations/main"
       }
-    }
-  },
-  "defaults": {
-    "build": {
-      "packtool": "mops sources",
-      "args": ""
     }
   },
   "dfx": "0.15.0",

@@ -1,0 +1,1 @@
+https://internetcomputer.org/docs/current/developer-docs/integrations/icrc-1/icrc1-ledger-setup

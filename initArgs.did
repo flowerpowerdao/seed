@@ -1,15 +1,15 @@
-(
-  record {
-    name = "SEED";
-    symbol = "SEED";
-    decimals = 8;
-    fee = 1_000_000; // 0.01
-    minting_account = opt record {
-      owner = principal "afcvu-dyaaa-aaaap-qboqq-cai"; // garden
-      subaccount = null;
-    };
-    initial_balances = vec {};
-    min_burn_amount = 10_000; // 0.0001
-    max_supply = 100_000_000_00_000_000; // 100m
-  }
-)
+(variant { Init = record {
+  token_symbol = "SEED";
+  token_name = "SEED";
+  decimals = opt 8;
+  minting_account = record { owner = principal "afcvu-dyaaa-aaaap-qboqq-cai" }; // garden
+  transfer_fee = 1_000_000; // 0.01
+  metadata = vec {};
+  initial_balances = vec {};
+  archive_options = record {
+    num_blocks_to_archive = 1000;
+    trigger_threshold = 2000;
+    controller_id = principal "afcvu-dyaaa-aaaap-qboqq-cai"; // garden
+    cycles_for_archive_creation = opt 2_000_000_000_000;
+  };
+}})
