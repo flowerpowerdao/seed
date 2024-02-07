@@ -3,13 +3,13 @@
   "canisters": {
     "main": {
       "type": "custom",
-      "wasm": "icrc1/ic-icrc1-ledger.wasm.gz",
-      "candid": "icrc1/ledger.did",
+      "wasm": "icrc1/icrc1_ledger.wasm.gz",
+      "candid": "icrc1/icrc1_ledger.did",
       "declarations": {
         "node_compatibility": true,
         "output": "declarations/main"
       }
     }
   },
-  "dfx": "0.15.0"
+  "dfx": "0.16.1"
 }
