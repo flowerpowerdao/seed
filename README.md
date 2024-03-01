@@ -6,7 +6,7 @@ Symbol `SEED`
 
 Decimals `8`
 
-Fee `0.01`
+Fee `0.00001`
 
 
 ### Local development
