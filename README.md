@@ -11,9 +11,7 @@ Fee `0.00001`
 
 ### Local development
 1. Clone repository
-2. Run `run git submodule init` and `git submodule update`
-3. Run `mops install`
-4. Start local replica and deploy:
+2. Start local replica and deploy canister:
 ```
 npm start
 ```
